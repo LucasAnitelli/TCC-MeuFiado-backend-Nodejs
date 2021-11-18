@@ -1,10 +1,7 @@
-{
+console.log('process', process.env.DATABASE_URL)
+module.exports = {
+    "url": process.env.DATABASE_URL,
     "type": "postgres",
-    "host": "localhost",
-    "port": 5432,
-    "username": "postgres",
-    "password": "docker",
-    "database": "postgres",
     "entities": [
         "./src/modules/**/infra/typeorm/entities/*.ts"
     ],
@@ -12,6 +9,6 @@
         "./src/shared/infra/typeorm/migrations/*.ts"
     ],
     "cli": {
-       "migrationsDir": "./src/shared/infra/typeorm/migrations" 
+        "migrationsDir": "./src/shared/infra/typeorm/migrations"
     }
 }
