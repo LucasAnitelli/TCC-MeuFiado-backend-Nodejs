@@ -8,13 +8,11 @@ export default class UserAvatarController {
   public async saveImg(request: Request, response: Response): Promise<Response> {
     const user_id = request.user.id;
     const updateUserPhoto = container.resolve(UpdateUserAvatarService);
-    if (request.file) {
-      const fileName = request.file.filename;
-      const user = await updateUserPhoto.execute({
-        user_id: user_id,
-        avatarFile: fileName,
-      });
-      return response.json(classToClass(user));
-    }
+    const fileName = request.file?.filename;
+    const user = await updateUserPhoto.execute({
+      user_id: user_id,
+      avatarFile: fileName ? fileName : '',
+    });
+    return response.json(classToClass(user));
   }
 }
