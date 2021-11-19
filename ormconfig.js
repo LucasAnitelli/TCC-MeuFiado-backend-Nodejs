@@ -1,4 +1,3 @@
-console.log('process', process.env.DATABASE_URL)
 module.exports = {
     "url": process.env.DATABASE_URL,
     "type": "postgres",
