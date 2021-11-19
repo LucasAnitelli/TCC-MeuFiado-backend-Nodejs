@@ -3,7 +3,7 @@ import Debtor from '../../typeorm/entities/Debtor';
 import { container } from 'tsyringe';
 import { parseISO } from 'date-fns';
 import { getRepository } from 'typeorm';
-import CreateDebtorService from '@modules/debtors/services/CreateDebtorService';
+import CreateDebtorService from '../../../../../modules/debtors/services/CreateDebtorService';
 
 
 export default class DebtorsController {

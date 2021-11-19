@@ -1,4 +1,4 @@
-import Debtor from "@modules/debtors/infra/typeorm/entities/Debtor";
+import Debtor from "../../../modules/debtors/infra/typeorm/entities/Debtor";
 import User from "../infra/typeorm/entities/User";
 
 export interface ResponseDTO {

@@ -1,8 +1,8 @@
-import AppError from "@shared/errors/AppError";
+import AppError from "../../../shared/errors/AppError";
 import { getRepository } from "typeorm";
 import User from "../infra/typeorm/entities/User";
 import { AvatarDTO } from "../dtos/ResponseDTO";
-import DiskStorageDebtor from "@shared/container/debtors/StorageDebtor/implementations/DiskStorageDebtor";
+import DiskStorageDebtor from "../../../shared/container/debtors/StorageDebtor/implementations/DiskStorageDebtor";
 
 interface Request {
   user_id: string;

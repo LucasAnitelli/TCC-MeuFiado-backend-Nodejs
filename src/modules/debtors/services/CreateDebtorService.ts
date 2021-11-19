@@ -1,4 +1,4 @@
-import { ResponseDebtorDTO } from "@modules/users/dtos/ResponseDTO";
+import { ResponseDebtorDTO } from "../../../modules/users/dtos/ResponseDTO";
 import { startOfHour } from "date-fns";
 import { getRepository } from "typeorm";
 import Debtor from "../infra/typeorm/entities/Debtor";

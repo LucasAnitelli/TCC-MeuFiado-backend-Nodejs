@@ -4,8 +4,8 @@ import { compare } from "bcryptjs";
 import { sign } from "jsonwebtoken";
 import User from "../infra/typeorm/entities/User";
 import { TokenDTO } from "../dtos/ResponseDTO";
-import AppError from "@shared/errors/AppError";
-import authConfig from '@config/auth';
+import AppError from "../../../shared/errors/AppError";
+import authConfig from '../../../config/auth';
 
 interface Request {
   email: string;

@@ -1,44 +1,43 @@
-import User from "@modules/users/infra/typeorm/entities/User";
+import User from "../../../../../modules/users/infra/typeorm/entities/User";
 import {
-    Entity,
-    Column,
-    PrimaryGeneratedColumn,
-    CreateDateColumn,
-    UpdateDateColumn,
-    ManyToOne,
-    JoinColumn,
-  } from "typeorm";
-  
-  @Entity("debtors")
-  class Debtor {
-    @PrimaryGeneratedColumn("uuid")
-    id: string;
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  CreateDateColumn,
+  UpdateDateColumn,
+  ManyToOne,
+  JoinColumn,
+} from "typeorm";
 
-    @Column()
-    user_id: string;
+@Entity("debtors")
+class Debtor {
+  @PrimaryGeneratedColumn("uuid")
+  id: string;
 
-    @ManyToOne(() => User)
-    @JoinColumn({ name: 'user_id' })
-    user: User;
+  @Column()
+  user_id: string;
 
-    @Column()
-    nameDebtor: string;
+  @ManyToOne(() => User)
+  @JoinColumn({ name: 'user_id' })
+  user: User;
 
-    @Column()
-    date: Date;
+  @Column()
+  nameDebtor: string;
 
-    @Column('decimal')
-    value: number;
+  @Column()
+  date: Date;
 
-    @Column()
-    product: string;
-  
-    @CreateDateColumn()
-    created_at: Date;
-  
-    @UpdateDateColumn()
-    updated_at: Date;
-  }
-  
-  export default Debtor;
-  
+  @Column('decimal')
+  value: number;
+
+  @Column()
+  product: string;
+
+  @CreateDateColumn()
+  created_at: Date;
+
+  @UpdateDateColumn()
+  updated_at: Date;
+}
+
+export default Debtor;

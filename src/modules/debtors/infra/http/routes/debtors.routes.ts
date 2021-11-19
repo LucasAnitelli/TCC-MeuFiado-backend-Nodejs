@@ -1,4 +1,4 @@
-import ensureAuthenticated from "@modules/users/infra/http/middlewares/ensureAuthenticated";
+import ensureAuthenticated from "../../../../../modules/users/infra/http/middlewares/ensureAuthenticated";
 import { Router } from "express";
 import DebtorsController from "../controllers/DebtorsController";
 
