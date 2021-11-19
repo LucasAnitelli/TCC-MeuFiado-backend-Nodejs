@@ -9,6 +9,9 @@
     "start": "ts-node src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
   },
+  "engines": {
+    "node": "14.17.5"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "celebrate": "^15.0.0",
