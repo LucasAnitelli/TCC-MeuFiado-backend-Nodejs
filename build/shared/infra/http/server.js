@@ -31,5 +31,5 @@ app.use(function (err, request, response, _next) {
     });
 });
 app.listen(process.env.PORT || 3333, function () {
-    console.log("🚀 Server started on port 3333!");
+    console.log("\uD83D\uDE80 Server started on port ".concat(process.env.PORT, "!"));
 });
