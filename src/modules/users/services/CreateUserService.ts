@@ -14,6 +14,7 @@ interface Request {
 class CreateUserService {
 
   public async execute({ nameEstablishment, email, password }: Request): Promise<ResponseDTO> {
+
     const usersRepository = getRepository(User);
 
     const checkUserExists = await usersRepository.findOne({
@@ -25,13 +26,14 @@ class CreateUserService {
     }
 
     const hashedPassword = await hash(password, 8);
+
     const user = usersRepository.create({
       nameEstablishment,
       email,
       password: hashedPassword,
     });
 
-    await usersRepository.save(user);
+    const resp = await usersRepository.save(user);
 
     //@ts-expect-error
     delete user.password;

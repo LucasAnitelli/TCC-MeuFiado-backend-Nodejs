@@ -49,7 +49,7 @@ var CreateUserService = /** @class */ (function () {
     CreateUserService.prototype.execute = function (_a) {
         var nameEstablishment = _a.nameEstablishment, email = _a.email, password = _a.password;
         return __awaiter(this, void 0, void 0, function () {
-            var usersRepository, checkUserExists, hashedPassword, user, bodyData;
+            var usersRepository, checkUserExists, hashedPassword, user, resp, bodyData;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -72,7 +72,7 @@ var CreateUserService = /** @class */ (function () {
                         });
                         return [4 /*yield*/, usersRepository.save(user)];
                     case 3:
-                        _b.sent();
+                        resp = _b.sent();
                         //@ts-expect-error
                         delete user.password;
                         bodyData = {

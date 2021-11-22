@@ -30,6 +30,6 @@ app.use(function (err, request, response, _next) {
         Success: false,
     });
 });
-app.listen(process.env.PORT || 3333, function () {
+app.listen(process.env.PORT, function () {
     console.log("\uD83D\uDE80 Server started on port ".concat(process.env.PORT, "!"));
 });
