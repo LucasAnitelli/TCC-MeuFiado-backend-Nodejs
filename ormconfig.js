@@ -1,10 +1,6 @@
-{
+module.exports = {
   "type": "postgres",
-  "host": "ec2-18-233-12-130.compute-1.amazonaws.com",
-  "port": 5432,
-  "username": "nsuolqzwvcrfsz",
-  "password": "4f4bc4e3a126b257e0c70f835418f173c867640f5cb4a781c1c6ef7ad2105da1",
-  "database": "dd5c9tpp2l6ng6",
+  "url": process.env.DATABASE_URL,
   "extra": {
     "ssl": {
       "require": true,
