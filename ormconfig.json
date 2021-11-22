@@ -12,12 +12,12 @@
     }
   },
   "entities": [
-    "./src/modules/**/infra/typeorm/entities/*.js"
+    "./build/modules/**/infra/typeorm/entities/*.js"
   ],
   "migrations": [
-    "./src/shared/infra/typeorm/migrations/*.js"
+    "./build/shared/infra/typeorm/migrations/*.js"
   ],
   "cli": {
-    "migrationsDir": "./src/shared/infra/typeorm/migrations"
+    "migrationsDir": "./build/shared/infra/typeorm/migrations"
   }
 }
